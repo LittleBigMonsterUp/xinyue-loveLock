@@ -1,0 +1,34 @@
+<view class="container userBox flex space-between p20" wx:if="{{!hasLogin}}">
+ 	<button open-type="getUserInfo" bindgetuserinfo="intoLoginAuth" > 授权登录 </button>
+ </view>
+ <view class="container userBox flex space-between p20" wx:else>
+    <view class="flex align-middle">
+        <image src="{{userInfo.avatar_url}}" />
+        <text>{{userInfo.nick_name}}</text>
+    </view>
+    <view class="flex align-middle" bindtap="setUserInfo">
+        <text>编辑资料</text>
+        <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{classNo}}">
+            <text>{{classNo[index]}}</text>
+        </picker> -->
+    </view>
+</view>
+
+<view class="container me_clock">
+    <view class="title p20">我的打卡</view>
+    <view class="me_clock_content flex space-between">
+        <view class="flex flex-column align-middle p20 p-v-40" bindtap="gotoJoin">
+            <image class="" src="../../images/assets/clock.png" />
+            <text class="">参与的打卡</text>
+        </view>
+        <view class="flex flex-column align-middle p20 p-v-40" bindtap="gotoList">
+            <image class="" src="../../images/assets/clock_list.png" />
+            <text class="">已创建的打卡</text>
+        </view>
+        <view class="flex flex-column align-middle p20 p-v-40" bindtap="gotoCreate">
+            <image class="" src="../../images/assets/create_clock.png" />
+            <text class="">新创建打卡</text>
+        </view>
+    </view>
+</view>
+

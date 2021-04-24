@@ -1,0 +1,43 @@
+<view class="container">
+        <!--系统推荐的打卡圈子展示-->
+        <block wx:if="{{showGetDataLoading}}">
+            <view class="weui-loadmore">
+                <view class="weui-loading"></view>
+                <view class="weui-loadmore__tips">加载中...</view>
+            </view>
+        </block>      
+        <block wx:elif="{{punchCardProjectLists.length > 0}}">
+          
+            <view class="search-result-list" style="margin-top: 42px">
+                <block wx:for="{{punchCardProjectLists}}" wx:key="{{item.id}}">
+                    <!--打卡圈子列表子项组件-->
+                    <punch-card-project-item punch-card-project-item-data="{{item}}">
+                    </punch-card-project-item>
+                </block>
+
+                <!--底部加载更多-->
+                <view class="weui-loadmore" hidden="{{!showMoreDataLoading}}"
+                      style="margin-bottom: 60px">
+                    <view class="weui-loading"></view>
+                    <view class="weui-loadmore__tips">正在加载</view>
+                </view>
+            </view>
+        </block>
+        <block wx:else><!--暂无该类型的打卡圈子数据-->
+            <view class="not-punch-card-project">
+                <view class="not-punch-card-project-notice">
+                    暂无该类型的打卡圈子,建一个呗
+                </view>
+                <view class="create-punch-card-project-btn"
+                      bindtap="createNewPunchCardProject">
+                    <image src="/images/button/add.png"></image>
+                    <text>创建打卡圈子</text>
+                </view>
+            </view>
+        </block>
+
+    <!-- 底线  -->
+    <view class="bottom" hidden="{{!notMoreData}}">
+        ——· 我也是有顶线的哦 ·——
+    </view>
+</view>

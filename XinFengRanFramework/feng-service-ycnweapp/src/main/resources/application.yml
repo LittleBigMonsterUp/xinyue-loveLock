@@ -1,0 +1,57 @@
+server:
+  port: 31005
+spring:
+  application:
+    name: xin-service-ycnservice
+  datasource:
+    url:  jdbc:mysql://localhost:3307/ycnweapp?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: xIaoFeng0746
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update # 一般使用update
+      # create: 每次运行程序时，都会重新创建表，故而数据会丢失
+      # create-drop: 每次运行程序时会先创建表结构，然后待程序结束时清空表
+      # upadte: 每次运行程序，没有表时会创建表，如果对象发生改变会更新表结构，原有数据不会清空，只会更新（推荐使用）
+      # validate: 运行程序会校验数据与数据库的字段类型是否相同，字段不同会报错
+      # none: 禁用DDL处理
+
+#jwt
+jwt:
+  header: Authorization
+  # 令牌前缀
+  token-start-with: Bearer
+  # 必须使用最少88位的Base64对该令牌进行编码
+  base64-secret: ZDI5emFHbDVhV2RsWkdGemRXRm5aV1JoYzNWaFoyVnVhWHBvWlc1ellYVm1OVFpuTldSelpqVm5OVFk0TldjMVp6Vm1OWE0xTkd0a2EycG1aMlJyYTJjMVp6VnFOV3ByZVg=
+  # 令牌过期时间 此处单位/毫秒 ，默认4小时
+  token-validity-in-seconds: 14400000
+  # 在线用户key
+  online-key: online-token
+  # 验证码
+  code-key: code-key
+
+#开启 swagger-ui
+swagger:
+  enabled: true
+
+# 微信小程序配置
+wxMini:
+  appId: wx5e46ac6749b04235
+  secret: a05a27666292eaeb3f846628f1b30cd0
+
+#七牛云
+qiniu:
+  accessKey: UbJfHQq5Dje1dAOUiZgaHhtjuxhErig1Ko53KT9n
+  secretKey: hdtR9jLVJy6PhHvCilyvlBba3AyFolf9qKvkwvOi
+  bucket: ycnweapp
+  path: http://up-z1.qiniup.com  # 每个地区的地址都不一样
+
+# 文件存储路径
+uploadFile:
+  path: F:\1DataBase\JavaUpLoadFile\file\
+  # 文件大小 /M
+  maxSize: 50

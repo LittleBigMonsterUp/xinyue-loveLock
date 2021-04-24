@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "jwt.header.token-start-with",
+      "type": "java.lang.String",
+      "description": "Description for jwt.header.token-start-with."
+  }
+] }

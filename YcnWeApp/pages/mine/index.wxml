@@ -1,0 +1,82 @@
+<!--suppress ALL -->
+<view class="container">
+
+  <!--用户信息 -->
+  <view class="container_userInfo" bindtap='intoUserInfoDetailPage'>
+    <!-- 头像 -->
+    <view class='userInfo_avatar'>
+      <!--使用默认的小程序内置的默认头像-->
+      <block wx:if="{{userInfo.avatar_url == 'default_avatar'}}">
+        <image class="avatar" src="/images/default/userAvatar.png">
+          <block wx:if="{{userInfo.sex == 1}}">
+            <view class="user-sex-male">
+              <image src="/images/button/sex_male.png">
+              </image>
+            </view>
+          </block>
+          <block wx:if="{{userInfo.sex == 2}}">
+            <view class="user-sex-female">
+              <image src="/images/button/sex_female.png">
+              </image>
+            </view>
+          </block>
+        </image>
+      </block>
+      <block wx:else>
+        <image class='avatar' src='{{userInfo.avatar_url}}'>
+          <block wx:if="{{userInfo.sex == 1}}">
+            <view class="user-sex-male">
+              <image src="/images/button/sex_male.png">
+              </image>
+            </view>
+          </block>
+          <block wx:if="{{userInfo.sex == 2}}">
+            <view class="user-sex-female">
+              <image src="/images/button/sex_female.png">
+              </image>
+            </view>
+          </block>
+        </image>
+      </block>
+    </view>
+
+    <!-- 昵称、用户ID -->
+    <view class='nickname_userId'>
+      <view class='nick-name'>{{userInfo.nick_name}}</view>
+      <view class='user-id'>用户ID：{{userInfo.id}}</view>
+    </view>
+
+    <!-- 查看我的主页 -->
+    <!-- <view class='mine'>
+      <text>查看我的主页</text>
+      <image class='into_mine_page' src='/images/button/into_button.png'>
+      </image>
+    </view> -->
+  </view>
+
+  <!--TODO访客记录-->
+
+
+  <!--相关功能-->
+  
+  <view class="box">
+    <navigator url="../my_feedback/feedback">
+      <view class="item">
+        <!-- <image class="miniImage" src="/resource/images/wengti.png" /> -->
+        <view style="flex:1;">个人信息</view>
+        <image class="arrow" src="/images/assets/arrow.png" />
+      </view>
+    </navigator>
+    <hr/>
+    <navigator url="../my_about/about">
+      <view class="item">
+        <!-- <image class="miniImage" src="/resource/images/guangyu.png" /> -->
+        <view style="flex:1;">关于</view>
+        <image class="arrow" src="/images/assets/arrow.png" />
+      </view>
+    </navigator>
+  </view>
+    
+ 
+
+</view>

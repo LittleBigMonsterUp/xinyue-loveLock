@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "新建圈子",
+  "navigationBarBackgroundColor": "#E3F2FD",
+  "navigationBarTextStyle": "black",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "wux-cell-group": "../../../_wux/cell-group/index",
+    "wux-cell": "../../../_wux/cell/index",
+    "wux-select": "../../../_wux/select/index"
+  }
+}

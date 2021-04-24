@@ -1,0 +1,14 @@
+<view class="container">
+    <!--填写圈主简介-->
+    <view class="input-creator-intr-info">
+        <view class="title">圈主简介</view>
+        <view class="input-creator-intr-info-area">
+            <textarea placeholder="请输入圈主简介" value="{{creatorIntrInfo}}"
+                      maxlength="50" bindinput="creatorIntrInfoInput"></textarea>
+        </view>
+        <view class="input-text-num-notice">{{inputTextNum}}/50</view>
+    </view>
+    <view class="update-creator-intr-info-btn" bindtap="updateCreatorIntrInfo">
+        <text>保存</text>
+    </view>
+</view>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="feng-framework-utils" />
+        <module name="feng-framework-prent" />
+        <module name="feng-service-api" />
+        <module name="feng-framework-common" />
+        <module name="feng-framework-models" />
+        <module name="feng-service-ycnweapp" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="feng-framework-common" target="1.8" />
+      <module name="feng-framework-models" target="1.8" />
+      <module name="feng-framework-prent" target="1.8" />
+      <module name="feng-framework-utils" target="1.8" />
+      <module name="feng-service-api" target="1.8" />
+      <module name="feng-service-ycnweapp" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="feng-framework-common" options="-parameters" />
+      <module name="feng-framework-models" options="-parameters" />
+      <module name="feng-framework-prent" options="-parameters" />
+      <module name="feng-framework-utils" options="-parameters" />
+      <module name="feng-service-api" options="-parameters" />
+      <module name="feng-service-ycnweapp" options="-parameters" />
+    </option>
+  </component>
+</project>

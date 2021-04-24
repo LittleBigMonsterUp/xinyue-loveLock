@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/XinFengRanFramework.iml" filepath="$PROJECT_DIR$/.idea/XinFengRanFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feng-framework-common/feng-framework-common.iml" filepath="$PROJECT_DIR$/feng-framework-common/feng-framework-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feng-framework-models/feng-framework-models.iml" filepath="$PROJECT_DIR$/feng-framework-models/feng-framework-models.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feng-framework-prent/feng-framework-prent.iml" filepath="$PROJECT_DIR$/feng-framework-prent/feng-framework-prent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feng-framework-utils/feng-framework-utils.iml" filepath="$PROJECT_DIR$/feng-framework-utils/feng-framework-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feng-service-api/feng-service-api.iml" filepath="$PROJECT_DIR$/feng-service-api/feng-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feng-service-ycnweapp/feng-service-ycnweapp.iml" filepath="$PROJECT_DIR$/feng-service-ycnweapp/feng-service-ycnweapp.iml" />
+    </modules>
+  </component>
+</project>

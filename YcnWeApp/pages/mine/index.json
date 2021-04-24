@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "我的",
+
+  "usingComponents": {
+    "mine-diary-item": "/components/mine/diaryItem",
+    "wux-cell-group": "../../_wux/cell-group/index",
+    "wux-cell": "../../_wux/cell-group/index"
+  }
+}

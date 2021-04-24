@@ -1,0 +1,31 @@
+<view class="container">
+    <view class="input-project-name">
+        <label>
+            <input type="text" placeholder="请输入班级名称" bindblur="checkInput" />
+        </label>
+        <view></view>
+    </view>
+    <wux-select id="wux-select1" />
+
+    <view class="picker_view">
+        <!-- <wux-cell-group title="Select"> -->
+        <wux-cell class="font-color" title="选择打卡课程" extra="{{ title1 }}" bind:click="onClick1"></wux-cell>
+        <!-- </wux-cell-group> -->
+    </view>
+    <!-- <view class="chose-project-privacy-type">
+        <radio-group class="radio-group" bindchange="radioChange">
+            <label>
+                <radio value="0" checked="false">设置为公开圈子,任何人都可以参加</radio>
+            </label>
+            <label>
+                <radio value="1" >设置为私密圈子,邀请别人才能参加</radio>
+            </label>
+        </radio-group>
+    </view> -->
+
+    <view class="submitBtn">
+        <button type="primary" disabled="{{btn_disable}}" bindtap="intoSetTwo">
+            下一步
+        </button>
+    </view>
+</view>
